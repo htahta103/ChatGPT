@@ -22,7 +22,12 @@ dynamic saveChatHistory(
   }
 }
 
-dynamic convertToJSON(String prompt) {
+dynamic convertToJSONList(String prompt) {
   // take the prompt and return a JSON with form [{"role": "user", "content": prompt}]
   return json.decode('[{"role": "user", "content": "$prompt"}]');
+}
+
+dynamic convertToJSON(String prompt) {
+  // take the prompt and return a JSON with form [{"role": "user", "content": prompt}]
+  return json.decode('{"role": "user", "content": "$prompt"}');
 }

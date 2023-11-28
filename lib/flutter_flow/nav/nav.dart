@@ -29,12 +29,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => const ChatAiScreenWidget(),
+      errorBuilder: (context, state) => const BardWebviewWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => const ChatAiScreenWidget(),
+          builder: (context, _) => const BardWebviewWidget(),
         ),
         FFRoute(
           name: 'HomePage',
@@ -45,6 +45,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'chat_ai_Screen',
           path: '/chatAiScreen',
           builder: (context, params) => const ChatAiScreenWidget(),
+        ),
+        FFRoute(
+          name: 'bardWebview',
+          path: '/bardWebview',
+          builder: (context, params) => const BardWebviewWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

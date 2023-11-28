@@ -549,12 +549,15 @@ class _AiChatComponentWidgetState extends State<AiChatComponentWidget> {
                                 functions
                                     .convertToJSON(_model.textController.text));
                           });
+                          setState(() {
+                            _model.textController?.clear();
+                          });
                           // The "chatHistory" is the generated JSON -- we send the whole chat history to AI in order for it to understand context.
                           _model.chatGPTResponse =
                               await OpenAPIGroup.completionsCall.call(
                             apiKey: FFAppConstants.apiKey,
                             promtJson: functions
-                                .convertToJSON(_model.textController.text),
+                                .convertToJSONList(_model.textController.text),
                           );
                           if ((_model.chatGPTResponse?.succeeded ?? true)) {
                             setState(() {
