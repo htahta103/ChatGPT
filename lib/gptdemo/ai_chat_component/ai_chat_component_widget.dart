@@ -1,4 +1,5 @@
 import '/backend/api_requests/api_calls.dart';
+import '/flutter_flow/flutter_flow_ad_banner.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -77,6 +78,12 @@ class _AiChatComponentWidgetState extends State<AiChatComponentWidget> {
                         height: 24.0,
                         decoration: const BoxDecoration(),
                       ),
+                    FlutterFlowAdBanner(
+                      width: MediaQuery.sizeOf(context).width * 1.0,
+                      height: 50.0,
+                      showsTestAd: false,
+                      androidAdUnitID: 'ca-app-pub-6276538230182184~4803026690',
+                    ),
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(

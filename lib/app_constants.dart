@@ -1,5 +1,5 @@
 
 abstract class FFAppConstants {
   static const String apiKey =
-      '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';
+      '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';
 }

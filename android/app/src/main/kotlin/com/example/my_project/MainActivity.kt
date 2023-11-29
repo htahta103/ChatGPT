@@ -1,4 +1,4 @@
-package com.mycompany.openaidetect
+package com.andyh.openaidetect
 
 import io.flutter.embedding.android.FlutterActivity
 
