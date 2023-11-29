@@ -81,7 +81,7 @@ class _AiChatComponentWidgetState extends State<AiChatComponentWidget> {
                     FlutterFlowAdBanner(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 50.0,
-                      showsTestAd: false,
+                      showsTestAd: true,
                       androidAdUnitID: 'ca-app-pub-6276538230182184~4803026690',
                     ),
                     Expanded(
